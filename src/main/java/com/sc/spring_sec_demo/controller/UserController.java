@@ -31,7 +31,7 @@ public class UserController {
         return "hi";
     }
 
-    @PostMapping("login")
+    @PostMapping("/login")
     public String login(@RequestBody User user) {
         Authentication authentication = authenticationManager.
                 authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
